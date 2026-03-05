@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Ziaulhye Mirza Mahammed | Psychology Educator & Author</title>
+    <meta name="description" content="Psychology education, mental health tips, self-improvement, and psychology books by Mr. Ziaulhye Mirza Mahammed">
+    <meta name="keywords" content="psychology education, mental health tips, mind science, self-improvement, psychology books">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #4a90e2;
+            --light-blue: #e6f2ff;
+            --dark-blue: #2c3e50;
+            --soft-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--soft-gray);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .logo span {
+            color: var(--dark-blue);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-blue), var(--white));
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--medium-gray);
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-blue);
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-blue);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-blue);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .credential {
+            background-color: var(--light-blue);
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        /* YouTube Section */
+        .youtube-section {
+            background-color: var(--white);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .video-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .video-thumb {
+            width: 100%;
+            height: 180px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+            font-size: 3rem;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-blue);
+        }
+        
+        .video-info p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Books Section */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .book-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .book-cover {
+            height: 300px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+            font-size: 2rem;
+        }
+        
+        .book-info {
+            padding: 1.5rem;
+        }
+        
+        .book-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-blue);
+        }
+        
+        .book-info p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .blog-img {
+            height: 180px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-blue);
+        }
+        
+        .blog-meta {
+            display: flex;
+            color: var(--medium-gray);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-meta span {
+            margin-right: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-right: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-blue);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .newsletter p {
+            margin-bottom: 1rem;
+            color: var(--light-gray);
+        }
+        
+        .newsletter-form {
+            display: flex;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form button {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 0 1rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo"><span>Psychologics Education</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#youtube">YouTube</a></li>
+                    <li><a href="#books">Books</a></li>
+                    </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            
+            <div class="hero-content">
+                <h1>Psychology Education & Mind Science with Mr. Ziaulhye</h1>
+                <p>Empowering minds through psychology education, mental health awareness, and self-improvement resources</p>
+                <div class="btn-container">
+    <a href="https://www.youtube.com/@psychologicseducation" target="_blank" class="btn btn-primary">
+        Subscribe to YouTube
+    </a>
+
+    <a href="#books" class="btn btn-primary">
+        View Books
+    </a>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Mr. Ziaulhye</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Psychology Educator & Author</h3>
+                    <p>Mr. Ziaulhye Mirza Mahammed is a dedicated psychology educator, vlogger, and author with a passion for making psychological concepts accessible to everyone. With years of experience in mental health education, he has created a platform that combines scientific knowledge with practical applications for daily life.</p>
+                    
+                    <p>His mission is to destigmatize mental health issues and provide evidence-based resources for personal growth and psychological well-being. Through his YouTube channel and books, he reaches thousands of viewers seeking to understand themselves and improve their mental health.</p>
+                    
+                    <div class="credentials">
+                        <div class="credential">M.A. Psychology</div>
+                        <div class="credential">Certified Mental Health Educator</div>
+                        <div class="credential">18+ Years Teaching Experience</div>
+                        <div class="credential">Published Author</div>
+                    </div>
+                    
+                    <p>Mr. Ziaulhye started his YouTube channel to bridge the gap between academic psychology and practical mental health advice. His books expand on these concepts, offering readers comprehensive guides to understanding and improving their psychological well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Section -->
+    <section class="youtube-section" id="youtube">
+        <div class="container">
+            <h2 class="section-title">Featured Videos</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="video-info">
+                        <h3>REBIRTH ( A story of a Eagle)/Psychologics</h3>
+                        <p>Psychologics Education.</p>
+                        <a href="https://youtu.be/7V5pIUt_ojQ" target="_blank" class="btn" style="margin-top: 1rem;">
+    Watch Video
+</a>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <a href="https://youtu.be/7V5pIUt_ojQ" target="_blank">
+    <div class="video-thumb">
+        <i class="fab fa-youtube"></i>
+    </div>
+</a>
+                    <div class="video-info">
+                        <h3>Personal goals and Motivation</h3>
+                        <p>Psychologics Education.</p>
+                        <a href="https://youtu.be/DsbjE3zD2ns" class="btn" style="margin-top: 1rem;">Watch Video</a>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="video-info">
+                        <h3>Success Psychologics Education </h3>
+                        <p>Psychologics Education.</p>
+                        <a href="https://youtu.be/Y12ATZtcOPM" class="btn" style="margin-top: 1rem;">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+               <a href="https://www.youtube.com/@psychologicseducation" target="_blank" class="btn">
+View All Videos
+</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books">
+        <div class="container">
+            <h2 class="section-title">Featured Books</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+    <img src="book1.jpg" style="width:100%; height:100%; object-fit:cover;">
+</div>                    <div class="book-info">
+                        <h3>Parenting and the Child’s Response: Understanding How Parents Shape Young Minds </h3>
+                        <p>Explore mindfulness techniques integrated with psychological principles for improved mental health.</p>
+                        <a href="https://www.amazon.in/dp/8199080906" target="_blank" class="btn">Buy on Amazon</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                   <div class="book-cover">
+    <img src="book1.jpg" style="width:100%; height:100%; object-fit:cover;">
+</div>
+                    <div class="book-info">
+                        <h3>POSITIVE PARENTING</h3>
+                        <p>Understand your child’s emotions, behavior, and psychological needs more deeply.</p>
+                        <a href="https://www.amazon.in/POSITIVE-PARENTING-ZIAULHYE-MIRZA-MAHAMMED/dp/B0FFYCKPV1" target="_blank" class="btn">Buy on Amazon</a>
+                    </div>
+                </div>
+                
+    
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Psychologics Education</h3>
+                    <p>Providing evidence-based psychology education, mental health resources, and self-improvement tools to empower individuals worldwide.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#youtube">YouTube</a></li>
+                        <li><a href="#books">Books</a></li>
+                
+                    </ul>
+                </div>
+                                
+                <div class="footer-column newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive psychology tips, book updates, and exclusive content.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Mr. Ziaulhye Mirza Mahammed. All rights reserved. | Psychology Education & Mental Health Resources</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
